@@ -5,9 +5,8 @@ const bcrypt = require("bcrypt");
 require("dotenv").config();
 
 const userRouter = express.Router();
-userRouter.use(express.json());
 
-userRouter.get("/users", async (req, res) => {
+userRouter.get("/", async (req, res) => {
     try {
         let user = await UserModel.find();
         res.send(user);
@@ -17,48 +16,48 @@ userRouter.get("/users", async (req, res) => {
     }
 })
 
-userRouter.post("/register", async (req, res) => {
+userRouter.post("/signup", async (req, res) => {
     const { email, password, name } = req.body
 
     try {
         bcrypt.hash(password, 5, async (err, secure_pwd) => {
             if (err) {
                 console.log(err);
+                res.send({ message: "Error in registering password" });
             } else {
                 const user = new UserModel({ email, password: secure_pwd, name });
                 await user.save()
-
-                let userData = await UserModel.find();
-                res.send(userData);
+                res.status(201).send({ message: "User has been successfully registered" });
             }
         })
 
     } catch (error) {
         console.log(error);
-        res.send("Error in registering");
+        res.send("Error in registering", { "message": error });
     }
 })
 
 userRouter.post("/login", async (req, res) => {
     const { email, password } = req.body
     try {
-        const user = await UserModel.find({ email })
-        let hashed_pwd = user[0].password
-        if (user.length > 0) {
-            bcrypt.compare(password, hashed_pwd, (err, result) => {
+        const user = await UserModel.findOne({ email })
+        if (!user) {
+            res.send({ message: "Please signup first" })
+        } else {
+            const hash_password = user?.password;
+            bcrypt.compare(password, hash_password, (err, result) => {
                 if (result) {
-                    const token = jwt.sign({ userID: user[0]._id }, process.env.key, { expiresIn: '2h' })
-                    res.send({ "msg": "Login Successful", "token": token });
+                    const token = jwt.sign({ userID: user._id }, process.env.key, { expiresIn: '3h' });
+                    const refresh_token = jwt.sign({ userID: user._id }, "R_unlock", { expiresIn: '15h' });
+                    res.send({ msg: "Login successfully", token, refresh_token })
                 } else {
-                    res.send("Wrong credentials");
+                    res.send({ message: "Something went wrong, login failed" })
                 }
             })
-        } else {
-            res.send("Wrong credentials");
         }
     } catch (error) {
-        console.log(error)
-        res.send("Error in login in")
+        res.send({ message: "Error in login the user" })
+        console.log(error);
     }
 })
 

@@ -10,7 +10,7 @@ const inventorySchema = mongoose.Schema({
     accidents: { type: Number, required: true },
     previousBuyers: { type: Number, required: true },
     registerPlace: { type: String, required: true },
-    userId: { type: String, required: true }
+    userID: String
 })
 
 const InventoryModel = mongoose.model("inventory", inventorySchema);
