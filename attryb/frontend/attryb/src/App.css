@@ -1,0 +1,111 @@
+.App {
+  text-align: center;
+}
+
+.nav {
+  background-color: grey;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+  padding: 20px 0 20px 0;
+}
+
+form {
+  width: 60%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
+}
+
+input {
+  width: 80%;
+  height: 30px;
+  font-size: large;
+}
+
+.sub {
+  width: 80%;
+  height: 40px;
+  cursor: pointer;
+  font-size: large;
+  margin-top: 15px;
+  background-color: blueviolet;
+  border: 0px;
+  color: white;
+}
+
+label {
+  font-size: 20px;
+  color: orange;
+}
+
+.main-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 15px;
+}
+
+.data-box {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.del {
+  width: 30%;
+  height: 27px;
+  background-color: rgb(236, 13, 13);
+  border: 0px;
+  color: white;
+  font-size: medium;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.edit {
+  width: 30%;
+  height: 27px;
+  background-color: greenyellow;
+  border: 0px;
+  color: white;
+  font-size: medium;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+.edit-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(8, 8, 8, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.edit-box>form {
+  background-color: rgb(8, 8, 8);
+}
+
+.edit-box>form>button {
+  margin-top: 15px;
+  width: 82%;
+  height: 25px;
+  background-color: blue;
+  border: 0px;
+  font-size: large;
+}
+
+select {
+  width: 30%;
+  border-radius: 5px;
+  height: 35px;
+}
