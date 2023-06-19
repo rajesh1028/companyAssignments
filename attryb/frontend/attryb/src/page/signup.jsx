@@ -19,10 +19,6 @@ const Signup = () => {
         setPassword(e.target.value)
     };
 
-    const handlePhoneNumberChange = (e) => {
-        setPhoneNo(e.target.value)
-    }
-
     const dataSubmit = async (event) => {
         event.preventDefault();
 
@@ -74,7 +70,7 @@ const Signup = () => {
                     <label>Password:</label><br />
                     <input type="password" value={password} onChange={handlePasswordChange} />
                 </div>
-                <button className="sub" type="submit">Signup</button>
+                <button className="submit" type="submit">Signup</button>
             </form>
         </div>
     )

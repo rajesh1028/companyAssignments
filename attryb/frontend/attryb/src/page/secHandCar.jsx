@@ -123,10 +123,10 @@ const SecHandCar = () => {
                 <option value="black">Black</option>
             </select>
 
-            <div className="main-box">
+            <div className="main">
                 {dataList.filter((data) => !filterColor || data.color === filterColor)
                     .map(data => (
-                        <div className="data-box" key={data._id + data.title}>
+                        <div className="container" key={data._id + data.title}>
                             <h4>Brand: {data.title}</h4>
                             <img src={data.image} alt={data.title} />
                             <ul>{data.description.map((ele) => {
@@ -141,12 +141,12 @@ const SecHandCar = () => {
                             <p>Number of Prvious Buyers: {data.previousBuyers}</p>
                             <p> registration Place: {data.registerPlace}</p>
                             <button className="edit" onClick={() => handleEdit(data._id, data)}>Edit</button>
-                            <button className="del" onClick={() => handleDelete(data._id, data)}>Delete</button>
+                            <button className="delete" onClick={() => handleDelete(data._id, data)}>Delete</button>
                         </div>
                     ))}
             </div>
             {isEditing && (
-                <div className="edit-box" style={{ display: 'block' }}>
+                <div className="edit" style={{ display: 'block' }}>
                     <form onSubmit={handleSubmit}>
                         <div>
                             <label>Title:</label><br />

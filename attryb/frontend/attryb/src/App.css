@@ -46,7 +46,7 @@ input {
   border-radius: 5px;
 }
 
-.sub {
+.submit {
   width: 60%;
   height: 40px;
   cursor: pointer;
@@ -65,25 +65,25 @@ label {
 
 }
 
-.main-box {
+.main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 8px;
   padding: 15px;
 }
 
-.data-box {
+.container {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 15px;
+  border-radius: 5px;
   padding: 15px;
   background-color: antiquewhite;
 }
 
-.data-box * {
+.container * {
   background-color: antiquewhite;
 }
 
-.del {
+.delete {
   width: 30%;
   height: 27px;
   background-color: rgb(236, 13, 13);
@@ -108,7 +108,7 @@ img {
   width: 100%;
 }
 
-.edit-box {
+.edit {
   position: fixed;
   top: 0;
   left: 0;
@@ -121,11 +121,11 @@ img {
   z-index: 9999;
 }
 
-.edit-box>form {
+.edit>form {
   background-color: rgb(8, 8, 8);
 }
 
-.edit-box>form>button {
+.edit>form>button {
   margin-top: 15px;
   width: 82%;
   height: 25px;
@@ -143,4 +143,10 @@ select {
 .filter {
   margin-left: 10%;
   background-color: whitesmoke;
+}
+
+.logos {
+  width: 25px;
+  margin: auto 15px;
+  border-radius: 5px;
 }

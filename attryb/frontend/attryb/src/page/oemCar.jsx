@@ -66,18 +66,18 @@ const OemCar = () => {
                 <option value="10L-8L">10L-8L</option>
                 <option value="8L-5L">8L-5L</option>
             </select>
-            <div className="main-box">
+            <div className="main">
                 {dataList.map(data => (
-                    <div className="data-box" key={data._id + data.modelName}>
+                    <div className="container" key={data._id + data.modelName}>
                         <h4>Model: {data.model}</h4>
                         <h5>Year Of Model: {data.year}</h5>
                         <img src={"https://stimg.cardekho.com/images/carexteriorimages/930x620/Tata/Harrier/9850/1681887437871/front-left-side-47.jpg?impolicy=resize&imwidth=420"} alt={data.model} />
                         <h5>Colors</h5>
-                        <ol>{data.colors.map((ele) => {
+                        <div>{data.colors.map((ele) => {
                             return (
-                                <li>{ele}</li>
+                                <button style={{ marginRight: '10px', background: 'whitesmoke' }}>{ele}</button>
                             )
-                        })}</ol>
+                        })}</div>
                         <h5>Price: {data.price}L</h5>
                         <h5>Mileage: {data.mileage}</h5>
                         <h5>Power: {data.power}</h5>
