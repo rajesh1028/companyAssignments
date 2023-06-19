@@ -83,32 +83,30 @@ label {
   background-color: antiquewhite;
 }
 
-.delete {
+.delete, .edit  {
   width: 30%;
   height: 27px;
-  background-color: rgb(236, 13, 13);
   border: 0px;
+  border-radius: 8px;
   color: white;
   font-size: medium;
   cursor: pointer;
+}
+
+.delete {
+  background-color: rgb(236, 13, 13);
   margin-left: 5px;
 }
 
 .edit {
-  width: 30%;
-  height: 27px;
-  background-color: greenyellow;
-  border: 0px;
-  color: white;
-  font-size: medium;
-  cursor: pointer;
+  background-color: rgb(27, 188, 27);
 }
 
 img {
   width: 100%;
 }
 
-.edit {
+.editBox {
   position: fixed;
   top: 0;
   left: 0;
@@ -119,19 +117,18 @@ img {
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  opacity: 95%;
 }
 
-.edit>form {
-  background-color: rgb(8, 8, 8);
-}
-
-.edit>form>button {
+.editBox>form>button {
   margin-top: 15px;
-  width: 82%;
-  height: 25px;
-  background-color: blue;
+  width: 60%;
+  background-color: violet;
   border: 0px;
   font-size: large;
+  margin-left: 15%;
+  padding: 2%;
+  border-radius: 8px;
 }
 
 select {

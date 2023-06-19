@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 
-const SecHandCar = () => {
+const SecondHandCar = () => {
     const [dataList, setDataList] = useState([]);
     const [isEditing, setIsEditing] = useState(false);
     const [title, setTitle] = useState("");
     const [image, setImage] = useState("");
-    const [kms, setKilometer] = useState("");
-    const [scratches, setScartch] = useState("");
-    const [paint, setColor] = useState("");
-    const [accidents, setNoAcc] = useState("");
-    const [previousBuyers, setBuyetCount] = useState("");
-    const [registerPlace, setRegist] = useState("");
+    const [kms, setKms] = useState("");
+    const [scratches, setScartches] = useState("");
+    const [paint, setPaint] = useState("");
+    const [accidents, setAccidents] = useState("");
+    const [previousBuyers, setPrevBuyers] = useState("");
+    const [registerPlace, setRegister] = useState("");
     const [editId, setEditId] = useState("");
     const [filterColor, setFilterColor] = useState('');
 
@@ -66,12 +66,12 @@ const SecHandCar = () => {
         setEditId(id)
         setTitle(ele.title);
         setImage(ele.image);
-        setKilometer(ele.kms);
-        setScartch(ele.scratches);
-        setColor(ele.paint);
-        setNoAcc(ele.accidents);
-        setBuyetCount(ele.previousBuyers);
-        setRegist(ele.registerPlace);
+        setKms(ele.kms);
+        setScartches(ele.scratches);
+        setPaint(ele.paint);
+        setAccidents(ele.accidents);
+        setPrevBuyers(ele.previousBuyers);
+        setRegister(ele.registerPlace);
     };
 
     const handleSubmit = async (event) => {
@@ -146,7 +146,7 @@ const SecHandCar = () => {
                     ))}
             </div>
             {isEditing && (
-                <div className="edit" style={{ display: 'block' }}>
+                <div className="editBox" style={{ display: 'block' }}>
                     <form onSubmit={handleSubmit}>
                         <div>
                             <label>Title:</label><br />
@@ -158,27 +158,27 @@ const SecHandCar = () => {
                         </div>
                         <div>
                             <label>Distence in KM:</label><br />
-                            <input type="text" value={kms} onChange={(event) => setKilometer(event.target.value)} />
+                            <input type="text" value={kms} onChange={(event) => setKms(event.target.value)} />
                         </div>
                         <div>
                             <label>scartchs:</label><br />
-                            <input type="text" value={scratches} onChange={(event) => setScartch(event.target.value)} />
+                            <input type="text" value={scratches} onChange={(event) => setScartches(event.target.value)} />
                         </div>
                         <div>
                             <label>Color:</label><br />
-                            <input type="text" value={paint} onChange={(event) => setColor(event.target.value)} />
+                            <input type="text" value={paint} onChange={(event) => setPaint(event.target.value)} />
                         </div>
                         <div>
                             <label>Number Of Accident:</label><br />
-                            <input type="number" value={accidents} onChange={(event) => setNoAcc(event.target.value)} />
+                            <input type="number" value={accidents} onChange={(event) => setAccidents(event.target.value)} />
                         </div>
                         <div>
                             <label>Number Of Previous Buyers:</label><br />
-                            <input type="number" value={previousBuyers} onChange={(event) => setBuyetCount(event.target.value)} />
+                            <input type="number" value={previousBuyers} onChange={(event) => setPrevBuyers(event.target.value)} />
                         </div>
                         <div>
                             <label>Registration Place:</label><br />
-                            <input type="text" value={registerPlace} onChange={(event) => setRegist(event.target.value)} />
+                            <input type="text" value={registerPlace} onChange={(event) => setRegister(event.target.value)} />
                         </div>
                         <button type="submit">Save</button>
                     </form>
@@ -193,4 +193,4 @@ const SecHandCar = () => {
     )
 }
 
-export default SecHandCar;
+export default SecondHandCar;

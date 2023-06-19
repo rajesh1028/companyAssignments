@@ -136,7 +136,7 @@ const AddCar = () => {
                     <label>Registration Place:</label><br />
                     <input type="text" value={registerPlace} onChange={handleRegistrationChange} />
                 </div>
-                <button className="sub" type="submit">SUMBIT</button>
+                <button className="submit" type="submit">SUMBIT</button>
             </form>
         </div>
     )
