@@ -15,9 +15,9 @@ app.get("/", (req, res) => {
 });
 
 app.use("/user", userRouter);
+app.use("/oem", oemRouter);
 app.use(authenticate);
 app.use("/car", inventoryRouter);
-app.use("/oem", oemRouter);
 
 
 app.listen(PORT, async () => {

@@ -49,7 +49,7 @@ userRouter.post("/login", async (req, res) => {
                 if (result) {
                     const token = jwt.sign({ userID: user._id }, process.env.key, { expiresIn: '3h' });
                     const refresh_token = jwt.sign({ userID: user._id }, "R_unlock", { expiresIn: '15h' });
-                    res.send({ msg: "Login successfully", token, refresh_token })
+                    res.send({ msg: "Login successfully", token, refresh_token, userID: user._id })
                 } else {
                     res.send({ message: "Something went wrong, login failed" })
                 }
