@@ -74,10 +74,6 @@ const Signup = () => {
                     <label>Password:</label><br />
                     <input type="password" value={password} onChange={handlePasswordChange} />
                 </div>
-                <div>
-                    <label>Phone Number:</label><br />
-                    <input type="number" value={phoneNo} onChange={handlePhoneNumberChange} />
-                </div>
                 <button className="sub" type="submit">Signup</button>
             </form>
         </div>

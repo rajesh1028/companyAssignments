@@ -115,7 +115,7 @@ const SecHandCar = () => {
     return (
         <div className="SecHandCar">
             <h2>SECOND-HAND CAR PAGE</h2>
-            <select value={filterColor} onChange={handleColorFilterChange}>
+            <select className="filter" value={filterColor} onChange={handleColorFilterChange}>
                 <option value="">All Colors</option>
                 <option value="red">Red</option>
                 <option value="blue">blue</option>

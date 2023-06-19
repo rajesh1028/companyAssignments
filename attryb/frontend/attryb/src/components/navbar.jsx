@@ -11,8 +11,8 @@ let obj = [
 
 const styfun = ({ isActive }) => {
     return isActive ?
-        { textDecoration: 'none', color: "orange" }
-        : { textDecoration: 'none', color: "lightblue" }
+        { textDecoration: 'none', color: "lightgreen", border: "1px solid black", background: "whitesmoke", padding: "5px", borderRadius: "5px" }
+        : { textDecoration: 'none', color: "violet" }
 }
 
 const Navbar = () => {

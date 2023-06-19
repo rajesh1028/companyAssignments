@@ -113,15 +113,15 @@ const AddCar = () => {
                     <input type="url" value={image} onChange={handleImageChange} />
                 </div>
                 <div>
-                    <label>Distence in KM:</label><br />
+                    <label>Kilometer Driven:</label><br />
                     <input type="text" value={kms} onChange={handleDistenceChange} />
                 </div>
                 <div>
-                    <label>scartchs:</label><br />
+                    <label>Scratches:</label><br />
                     <input type="text" value={scratches} onChange={handleScartchsChange} />
                 </div>
                 <div>
-                    <label>Color:</label><br />
+                    <label>Paint:</label><br />
                     <input type="text" value={paint} onChange={handleColorChange} />
                 </div>
                 <div>

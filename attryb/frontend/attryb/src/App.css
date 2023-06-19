@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+}
+
+* {
+  background: bisque;
 }
 
 .nav {
@@ -8,36 +12,61 @@
   justify-content: space-evenly;
   font-size: 20px;
   padding: 20px 0 20px 0;
+  border-radius: 20px;
+  margin: 3%;
+}
+
+.nav * {
+  background-color: grey;
+}
+
+h2 {
+  text-align: center;
+  text-decoration: underline;
 }
 
 form {
-  width: 60%;
+  width: 55%;
   margin: auto;
-  border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 10px;
   padding: 20px;
+  background: whitesmoke;
+}
+
+form * {
+  background: whitesmoke;
+  margin: auto;
+}
+
+form>* {
+  margin-left: 10%;
 }
 
 input {
   width: 80%;
   height: 30px;
   font-size: large;
+  border-radius: 5px;
 }
 
 .sub {
-  width: 80%;
+  width: 60%;
   height: 40px;
   cursor: pointer;
   font-size: large;
   margin-top: 15px;
-  background-color: blueviolet;
+  background-color: violet;
   border: 0px;
   color: white;
+  border-radius: 15px;
+  margin-left: 20%;
 }
 
 label {
   font-size: 20px;
-  color: orange;
+  color: skyblue;
+
 }
 
 .main-box {
@@ -50,7 +79,12 @@ label {
 .data-box {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 15px;
-  padding: 5px;
+  padding: 15px;
+  background-color: antiquewhite;
+}
+
+.data-box * {
+  background-color: antiquewhite;
 }
 
 .del {
@@ -108,4 +142,9 @@ select {
   width: 30%;
   border-radius: 5px;
   height: 35px;
+}
+
+.filter {
+  margin-left: 10%;
+  background-color: whitesmoke;
 }

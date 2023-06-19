@@ -61,7 +61,7 @@ const OemCar = () => {
     return (
         <div className="OemCar">
             <h2>OEM CAR PAGE</h2>
-            <select value={priceFilter} onChange={handlePriceFilterChange}>
+            <select className="filter" value={priceFilter} onChange={handlePriceFilterChange}>
                 <option value="">All Prices</option>
                 <option value="10L-8L">10L-8L</option>
                 <option value="8L-5L">8L-5L</option>
@@ -69,8 +69,8 @@ const OemCar = () => {
             <div className="main-box">
                 {dataList.map(data => (
                     <div className="data-box" key={data._id + data.modelName}>
-                        <h4>Model Name: {data.model}</h4>
-                        <p>Year Of Model: {data.year}</p>
+                        <h4>Model: {data.model}</h4>
+                        <h5>Year Of Model: {data.year}</h5>
                         <img src={"https://stimg.cardekho.com/images/carexteriorimages/930x620/Tata/Harrier/9850/1681887437871/front-left-side-47.jpg?impolicy=resize&imwidth=420"} alt={data.model} />
                         <h5>Colors</h5>
                         <ol>{data.colors.map((ele) => {
@@ -78,10 +78,10 @@ const OemCar = () => {
                                 <li>{ele}</li>
                             )
                         })}</ol>
-                        <p>Price: {data.price}L</p>
-                        <p>Mileage: {data.mileage}</p>
-                        <p>Power: {data.power}</p>
-                        <p>Max Speed: {data.maxSpeed}</p>
+                        <h5>Price: {data.price}L</h5>
+                        <h5>Mileage: {data.mileage}</h5>
+                        <h5>Power: {data.power}</h5>
+                        <h5>Max Speed: {data.maxSpeed}</h5>
                     </div>
                 ))}
             </div>
