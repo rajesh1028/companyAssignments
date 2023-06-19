@@ -21,6 +21,7 @@ const OemCar = () => {
             console.log(data);
             setDataList(data);
         } catch (error) {
+            alert("please login to continue");
             console.log('Error fetching data:', error);
         }
     };
