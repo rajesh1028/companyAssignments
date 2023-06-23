@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./images/index/KMCH logo.jpeg" />
+  <link rel="stylesheet" href="./Styles/navbar.css" />
+  <link rel="stylesheet" href="./Styles/index.css" />
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./Styles/footer.css" />
+  <title>Kovai Medical</title>
+</head>
+
+<body>
+  <nav class="header">
+    <img onclick="redirect()" src="./images/index/KMCH logo.jpeg" class="logo" style="width: 6%;"/>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="./doctors.html">Find Doctors</a></li>
+      <li><a href="./doctors.html">Video Consult</a></li>
+      <li><a href="./userDashboard.html">Appointments</a></li>
+      <li><a href="#about_us">About</a></li>
+      <li><a href="#about_us">Contact</a></li>
+      <li>
+        <a href="#"><i class="fa-regular fa-user" style="color: #545659"></i>&nbsp;&nbsp;<span
+            id="fullname">User</span></a>
+      </li>
+      <li id="my_acc_drop">
+        <button class="button-62" id="my_account" onclick="loginsignup()">
+          My Account
+        </button>
+      </li>
+    </ul>
+  </nav>
+  <br /><br /><br />
+  <!-- popup -->
+  <div id="divPopup" style="opacity: 0" class="popup_div" data-aos="fade-left">
+    <div id="popup_div_child_1">
+      <a class="anchor" href="./loginsignup.html">LogIn | SignUp</a>
+      <a class="anchor" href="#">Dashboard</a>
+      <a class="anchor" href="#">Another</a>
+    </div>
+    <div id="popup_div_child_2">
+      <a id="logout" href=""><i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;Logout</a>
+    </div>
+  </div>
+  <!-- popup -->
+  <div>
+    <div class="slideshow-container">
+      <!-- Full images with numbers and message Info -->
+      <div class="Containers">
+        <!-- <div class="MessageInfo">1 / 3</div> -->
+        <img src="./images/index/slider-bg-2.png" style="width: 100%" />
+        <!-- <div class="Info">First caption</div> -->
+      </div>
+
+      <div class="Containers">
+        <!-- <div class="MessageInfo">2 / 3</div> -->
+        <img src="./images/index/slider-bg-1.png" style="width: 100%" />
+        <!-- <div class="Info">Second Caption</div> -->
+      </div>
+
+      <div class="Containers">
+        <!-- <div class="MessageInfo">3 / 3</div> -->
+        <img src="./images/index/slider-bg-3.png" style="width: 100%" />
+        <!-- <div class="Info">Third Caption</div> -->
+      </div>
+
+      <!-- Back and forward buttons -->
+      <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+  </div>
+  <div class="section_2">
+    <!-- <div class="section_2_child1">
+      <img src="" alt="" />
+      <h1>Consult top doctors online for any health concern</h1>
+      <p>
+        Private online consultations with verified doctors in all specialists
+      </p>
+    </div> -->
+  </div>
+  <div id="section_4">
+    <div id="section_4_heading">
+      <p id="section_4_heading_pricingplan">Consult top doctors online for any health concern</p>
+      <p>
+        Private online consultations with verified doctors in all specialists
+      </p>
+    </div>
+    <div id="section_4_options">
+      <div id="section_4_options_child" data-aos="fade-up">
+        <img width="50%" src="./images/index/pricing-1.jpg" alt="pricing_3" />
+        <p id="section_4_options_child_heading">Instant Video Consultation</p>
+        <p id="section_4_options_child_">Connect within 60 seconds</p>
+        <button class="button-87">Book Now</button>
+      </div>
+      <div id="section_4_options_child" data-aos="fade-up">
+        <img width="50%" src="./images/index/pricing-2.jpg" alt="pricing_3" />
+        <p id="section_4_options_child_heading">Find Doctors Near You</p>
+        <p id="section_4_options_child_">Confirmed appointments</p>
+        <button class="button-87">Book Now</button>
+      </div>
+      <div id="section_4_options_child" data-aos="fade-up">
+        <img width="50%" src="./images/index/pricing-3.jpg" alt="pricing_3" />
+        <p id="section_4_options_child_heading">Lab Tests</p>
+        <p id="section_4_options_child_">Sample pickup at your home</p>
+        <button class="button-87">Book Now</button>
+      </div>
+    </div>
+  </div>
+  <div id="section_5">
+    <div id="section_5_child">
+      <div id="section_5_heading">
+        <p id="section_5_heading_p"><span>Book an appointment for an in-clinic consultation</span></p>
+      </div>
+      <div id="section_5_details">
+        <div id="section_5_details_child_1" data-aos="fade-right">
+          <p>
+            Find experienced doctors across all specialties
+          </p>
+          <button class="button-24">LEARN MORE</button>
+        </div>
+        <div id="section_5_details_child_2" data-aos="flip-right" data-aos-duration="1500">
+          <p id="section_5_details_child_2_heading">Time Shedule</p>
+          <p id="day">Mon-Fri</p>
+          <p id="time">10.00 AM - 05.00 PM</p>
+          <p id="day">Saturday</p>
+          <p id="time">10.00 AM - 05.00 PM</p>
+          <p id="day">Sunday</p>
+          <p id="time">11.00 AM - 03.00 PM</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div id="footer">
+      <div id="about_us">
+        <p id="about_us_h1">About Us</p>
+        <p id="about_us_p">
+          Kovai Medical Center & Hospital Ltd. is a holding company, which engages in the provision of healthcare
+          activities. It offers heart institute, multi organ transplant center, comprehensive cancer center,
+          interventional radiology, OBG, paediatrics, critical care and trauma, orthopaedics, and others.
+        </p>
+        <i class="fa-brands fa-facebook" style="color: #1366f6"></i><i class="fa-brands fa-twitter"
+          style="color: #70b5ff"></i><i class="fa-brands fa-square-whatsapp" style="color: #00ff4c"></i><i
+          class="fa-brands fa-square-instagram" style="color: #f0660a"></i>
+      </div>
+      <div id="recent">
+        <p id="recent_h1">Recent Posts</p>
+        <div id="recent_child">
+          <div id="recent_child_img">
+            <img src="./images/index/1240_3.jpg-350x218.jpg" alt="recent1" />
+          </div>
+          <div id="recent_child_desc">
+            <p id="recent_child_desc_p">
+              Availability of top class surgeons.
+            </p>
+          </div>
+        </div>
+        <div id="recent_child">
+          <div id="recent_child_img">
+            <img src="./images/index/1240_6.jpg-350x219.webp" alt="recent2" />
+          </div>
+          <div id="recent_child_desc">
+            <p id="recent_child_desc_p">
+              Get a free video consultation.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="contact_us">
+        <p id="contact_us_h1">Contact Us</p>
+        <p id="contact_us_p">176 W street name, New York</p>
+        <p id="contact_us_p">Email: info@yoursite.com</p>
+        <p id="contact_us_p">Telephone: +1(800)123-4566</p>
+      </div>
+      <div id="pages">
+        <p id="pages_h1">Pages</p>
+        <a href="./index.html">Home</a><br />
+        <a href="#">About</a><br />
+        <a href="#">Contact</a><br />
+        <a href="./loginsignup.html">Login</a>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="./Scripts/index.js"></script>
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="https://kit.fontawesome.com/a7c1ce01b0.js" crossorigin="anonymous"></script>
+
+</html>
